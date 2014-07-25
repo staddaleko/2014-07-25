@@ -5,19 +5,21 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using WcfService1;
+//using WcfService4.Przedmioty;
 
-namespace WcfService1
+namespace WcfService4
 {
     
     [ServiceContract]
-    public interface IService1
+    public interface IService2
     {
 
         [OperationContract]
         Oceny GetOcena(int id_s, int id_p);//chcemy całą ocenę (obiekt)
 
         [OperationContract]
-        List<KrotkaOcen> GetOcena(int is_s);
+        List<WcfService4.Przedmioty.KrotkaOcen> GetOcena(int is_s);
 
         [OperationContract]
         int SetOcena(int id_s, int id_p, int wartosc_o); //identyfikator oceny chcemy (id_o)
@@ -27,6 +29,13 @@ namespace WcfService1
 
         [OperationContract]
         int SetPrzedmiot(string nazwa_p);
+
+        [OperationContract]
+        StudentKlasa GetStudent(int id);
+
+        [OperationContract]
+        int SetStudent(string imie, string nazwisko);
+
 
         
     }

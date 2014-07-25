@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService1
+namespace WcfService4
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -20,10 +20,6 @@ namespace WcfService1
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-
-    using System.ServiceModel;
-    using System.ServiceModel.Web;
-    using System.Runtime.Serialization;
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Ocena_Przedmioty")]
@@ -90,8 +86,7 @@ namespace WcfService1
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Oceny")]
-	[DataContract]
-    public partial class Oceny : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Oceny : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -127,8 +122,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Oceny", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		[DataMember]
-        public int ID_Oceny
+		public int ID_Oceny
 		{
 			get
 			{
@@ -148,8 +142,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Przedmiotu", DbType="Int NOT NULL")]
-		[DataMember]
-        public int ID_Przedmiotu
+		public int ID_Przedmiotu
 		{
 			get
 			{
@@ -173,8 +166,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Studenta", DbType="Int NOT NULL")]
-		[DataMember]
-        public int ID_Studenta
+		public int ID_Studenta
 		{
 			get
 			{
@@ -194,8 +186,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Wartosc", DbType="Int NOT NULL")]
-		[DataMember]
-        public int Wartosc
+		public int Wartosc
 		{
 			get
 			{
@@ -215,8 +206,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Przedmioty_Oceny", Storage="_Przedmioty", ThisKey="ID_Przedmiotu", OtherKey="ID_Przedmiotu", IsForeignKey=true)]
-		
-        public Przedmioty Przedmioty
+		public Przedmioty Przedmioty
 		{
 			get
 			{
@@ -271,8 +261,7 @@ namespace WcfService1
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Przedmioty")]
-	[DataContract]
-    public partial class Przedmioty : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Przedmioty : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -300,8 +289,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Przedmiotu", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		[DataMember]
-        public int ID_Przedmiotu
+		public int ID_Przedmiotu
 		{
 			get
 			{
@@ -321,8 +309,7 @@ namespace WcfService1
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa_przedmiotu", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		[DataMember]
-        public string Nazwa_przedmiotu
+		public string Nazwa_przedmiotu
 		{
 			get
 			{
@@ -385,18 +372,20 @@ namespace WcfService1
 			this.SendPropertyChanging();
 			entity.Przedmioty = null;
 		}
-	}
 
-    public class KrotkaOcen
-    {
-        public string Nazwa_przedm { set; get; }
-        public int Wartosc_oc { get; set; }
-        public KrotkaOcen (){ }
-        public KrotkaOcen(string nazwa, int wartosc)
+        public class KrotkaOcen
         {
-            this.Nazwa_przedm = nazwa;
-            this.Wartosc_oc = wartosc;
+            public string Nazwa_p { get; set; }
+            public int Wartosc_o { get; set; }
+
+            public KrotkaOcen() { }
+
+            public KrotkaOcen(string nazwa, int wartosc)
+            {
+                this.Nazwa_p = nazwa;
+                this.Wartosc_o = wartosc;
+            }
         }
-    }
+	}
 }
 #pragma warning restore 1591
