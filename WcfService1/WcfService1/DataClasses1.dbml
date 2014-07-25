@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ocena_Przedmioty" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=S219-4\sqlexpress;Initial Catalog=Ocena_Przedmioty;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Ocena_PrzedmiotyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Oceny" Member="Ocenies">
+    <Type Name="Oceny">
+      <Column Name="ID_Oceny" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Przedmiotu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Studenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Wartosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Przedmioty_Oceny" Member="Przedmioty" ThisKey="ID_Przedmiotu" OtherKey="ID_Przedmiotu" Type="Przedmioty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Przedmioty" Member="Przedmioties">
+    <Type Name="Przedmioty">
+      <Column Name="ID_Przedmiotu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa_przedmiotu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Przedmioty_Oceny" Member="Ocenies" ThisKey="ID_Przedmiotu" OtherKey="ID_Przedmiotu" Type="Oceny" />
+    </Type>
+  </Table>
+</Database>

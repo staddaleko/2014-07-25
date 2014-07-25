@@ -1,0 +1,6 @@
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\bin\WcfService1.dll.config
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\bin\WcfService1.dll
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\bin\WcfService1.pdb
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\Kurs04\Desktop\2014-07-25 WCF cd\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
