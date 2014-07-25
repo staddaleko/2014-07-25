@@ -6,6 +6,8 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WcfService1;
+using WcfService1;
+using WcfServiceKruwa;
 
 
 namespace WcfService4
@@ -14,7 +16,7 @@ namespace WcfService4
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Dziennik : IService2
     {
-        public DataClasses1DataContext db = new DataClasses1DataContext();
+        public DataClasses4DataContext db = new DataClasses4DataContext();
 
         public IService1 studentSvc;
         public Dziennik() //kod skopiowany ze wczorajszej aplikacji

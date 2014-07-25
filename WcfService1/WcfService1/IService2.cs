@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WcfService1;
+using WcfServiceKruwa;
 //using WcfService4.Przedmioty;
 
 namespace WcfService4

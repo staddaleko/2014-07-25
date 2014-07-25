@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3655761A-81C2-4446-B1BA-309E95F1FE11}</ProjectGuid>
+    <ProjectGuid>{CA1DA006-5F28-4E45-98BF-D3E8033417F1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WcfServiceKruwa</RootNamespace>
-    <AssemblyName>WcfServiceKruwa</AssemblyName>
+    <RootNamespace>WszystkoOdNowaKruwa</RootNamespace>
+    <AssemblyName>WszystkoOdNowaKruwa</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <UseIISExpress>true</UseIISExpress>
@@ -58,38 +58,34 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WcfService1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2014-07-24 WCF\AplikacjaKliencka\AplikacjaKliencka\bin\Debug\WcfService1.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service2.svc" />
+    <Content Include="ServiceNowy.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataClasses4.designer.cs">
+    <Compile Include="linku.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses4.dbml</DependentUpon>
+      <DependentUpon>linku.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Service2.svc.cs">
-      <DependentUpon>Service2.svc</DependentUpon>
+    <Compile Include="ServiceNowy.svc.cs">
+      <DependentUpon>ServiceNowy.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService2.cs" />
+    <Compile Include="IServiceNowy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataClasses4.dbml">
+    <Content Include="linku.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses4.designer.cs</LastGenOutput>
+      <LastGenOutput>linku.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="DataClasses4.dbml.layout">
-      <DependentUpon>DataClasses4.dbml</DependentUpon>
+    <None Include="linku.dbml.layout">
+      <DependentUpon>linku.dbml</DependentUpon>
     </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -114,9 +110,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49384</DevelopmentServerPort>
+          <DevelopmentServerPort>49910</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49384/</IISUrl>
+          <IISUrl>http://localhost:49910/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

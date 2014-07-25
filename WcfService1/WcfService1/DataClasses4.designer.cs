@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService4
+namespace WcfServiceKruwa
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -23,7 +23,7 @@ namespace WcfService4
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Ocena_Przedmioty")]
-	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
+	public partial class DataClasses4DataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -38,31 +38,31 @@ namespace WcfService4
     partial void DeletePrzedmioty(Przedmioty instance);
     #endregion
 		
-		public DataClasses1DataContext() : 
+		public DataClasses4DataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["Ocena_PrzedmiotyConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection) : 
+		public DataClasses4DataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
+		public DataClasses4DataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClasses4DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClasses4DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -372,20 +372,6 @@ namespace WcfService4
 			this.SendPropertyChanging();
 			entity.Przedmioty = null;
 		}
-
-        public class KrotkaOcen
-        {
-            public string Nazwa_p { get; set; }
-            public int Wartosc_o { get; set; }
-
-            public KrotkaOcen() { }
-
-            public KrotkaOcen(string nazwa, int wartosc)
-            {
-                this.Nazwa_p = nazwa;
-                this.Wartosc_o = wartosc;
-            }
-        }
 	}
 }
 #pragma warning restore 1591
